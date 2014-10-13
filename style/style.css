@@ -1,0 +1,320 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+	border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse: collapse;border-spacing: 0;}
+
+html, body { height: 100%; }
+body
+{
+	overflow: hidden;
+	background: #05abe0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #05abe0 0%, #53cbf1 60%, #87e0fd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05abe0), color-stop(60%,#53cbf1), color-stop(100%,#87e0fd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #05abe0 0%,#53cbf1 60%,#87e0fd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#87e0fd',GradientType=0 ); /* IE6-9 */
+}
+div, img
+{
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
+
+@font-face
+{
+	font-family: Daisy;
+	src: url('../fonts/daisy.ttf');
+}
+@font-face
+{
+	font-family: JellykaDeliciousCake;
+	src: url('../fonts/Jellyka Delicious Cake.ttf');
+}
+
+#title
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding-top: 25px;
+	z-index: 60000;
+	background-color: white;
+	font-family: JellykaDeliciousCake, sans-serif;
+}
+#title > h1
+{
+	font-size: 60px;
+	text-align: center;
+}
+#title > h1 > input
+{
+	width: 250px;
+	padding: 10px;
+	border-radius: 3px;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-color: rgba(0,0,0,0.1);
+	color: #EB2B36;
+	font-size: 60px;
+	font-family: JellykaDeliciousCake, sans-serif;
+	text-align: center;
+}
+#title > p
+{
+	width: 600px;
+	margin: auto;
+	margin-top: 25px;
+	font-size: 40px;
+	font-family: Daisy, JellykaDeliciousCake, sans-serif;
+	text-align: center;
+}
+#title > p > img
+{
+	height: 25px;
+}
+.bigButton
+{
+	width: 300px;
+	margin: auto;
+	margin-top: 25px;
+	padding: 5px 0;
+	border: 1px dotted rgba(0,0,0, 0.3);
+	border-radius: 5px;
+	font-size: 30px;
+	text-align: center;
+}
+.bigButton:hover
+{
+	cursor: pointer;
+	background-color: rgba(0,0,0, 0.05);
+}
+
+p > span.princess_name
+{
+	color: #EB2B36;
+}
+
+#gameOver
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
+	
+	background-color: black;
+	color: white;
+	font-family: JellykaDeliciousCake, sans-serif;
+}
+#gameOver > h1
+{
+	margin-top: 150px;
+	font-size: 40px;
+	text-align: center;
+}
+#gameOver > #retry
+{
+	margin-top: 25px;
+	border-color: rgba(255,255,255, 0.5);
+}
+#gameOver > #retry:hover
+{
+	background-color: rgba(255,255,255, 0.15);
+}
+
+#damage
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(229,229,229,0) 0%, rgba(246,113,113,0) 64%, rgba(251,79,79,0.13) 83%, rgba(254,53,53,0.52) 97%, rgba(255,48,48,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(229,229,229,0)), color-stop(64%,rgba(246,113,113,0)), color-stop(83%,rgba(251,79,79,0.13)), color-stop(97%,rgba(254,53,53,0.52)), color-stop(100%,rgba(255,48,48,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(229,229,229,0) 0%,rgba(246,113,113,0) 64%,rgba(251,79,79,0.13) 83%,rgba(254,53,53,0.52) 97%,rgba(255,48,48,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(229,229,229,0) 0%,rgba(246,113,113,0) 64%,rgba(251,79,79,0.13) 83%,rgba(254,53,53,0.52) 97%,rgba(255,48,48,1) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(229,229,229,0) 0%,rgba(246,113,113,0) 64%,rgba(251,79,79,0.13) 83%,rgba(254,53,53,0.52) 97%,rgba(255,48,48,1) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(229,229,229,0) 0%,rgba(246,113,113,0) 64%,rgba(251,79,79,0.13) 83%,rgba(254,53,53,0.52) 97%,rgba(255,48,48,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#ff3030',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#menu
+{
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: right;
+	background: url('../pictures/menu.jpg');
+	-background-size: 100%;
+	background-position: 0 -5px;
+	z-index: 50;
+}
+
+span.meter
+{
+	display: inline-block;
+	width: 150px;
+	box-sizing: border-box;
+	margin-right: 10px;
+	padding: 0 5px;
+	border: 1px solid rgba(0,0,0,0.5);
+	color: rgba(0,0,0,0.5);
+	font-variant: small-caps;
+	font-weight: bold;
+	text-align: center;
+	background-image: url('../pictures/1x1.png');
+	background-repeat: repeat-y;
+	background-size: 100%;
+	background-color: #00FF00;
+}
+
+.button
+{
+	display: inline-block;
+	padding: 3px 5px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	color: white;
+	background-color: rgba(255,255,255, 0.3);
+	cursor: pointer;
+}
+.button:hover
+{
+	background-color: rgba(255,255,255, 0.5);
+}
+.button:active
+{
+	color: black;
+	background-color: rgba(255,255,255, 0.65);
+}
+
+#scoreContainer
+{
+	float: left;
+	width: 200px;
+	margin-top: 6px;
+	text-align: left;
+	color: white;
+}
+
+#princess
+{
+	position: absolute;
+	bottom: 20%;
+	left: 49%;
+	width: 32px;
+	height: 53px;
+	background-image: url(../sprites/PrincessCharacter.png);
+	background-repeat: no-repeat;
+}
+
+#scoreBubble
+{
+	position: absolute;
+	top: -50px;
+	left: -5px;
+	width: 45px;
+	height: 35px;
+	padding: 8px 6px;
+	box-sizing: border-box;
+	border-radius: 15px;
+	color: green;
+	font-size: 20px;
+	opacity: 0;
+	
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.75) 29%, rgba(165,165,165,0.75) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.75)), color-stop(29%,rgba(255,255,255,0.75)), color-stop(100%,rgba(165,165,165,0.75))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 29%,rgba(165,165,165,0.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 29%,rgba(165,165,165,0.75) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 29%,rgba(165,165,165,0.75) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 29%,rgba(165,165,165,0.75) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfffffff', endColorstr='#bfa5a5a5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#fairy
+{
+	position: absolute;
+	bottom: 20%;
+	margin-bottom: 20px;
+	left: 45%;
+	width: 25px;
+	height: 25px;
+	background-image: url(../sprites/fairy.png);
+	background-repeat: no-repeat;
+}
+
+#dirt
+{
+	position: absolute;
+	bottom: 0;
+	width: 300%;
+	height: 20%;
+	background-image: url(../pictures/Dirt.jpg);
+	background-size: 6.25% 100%;
+}
+
+#grass
+{
+	position: absolute;
+	bottom: 20%;
+	z-index: 10;
+	width: 300%;
+	height: 10px;
+	background-image: url(../pictures/grass.png);
+	background-size: 100% 100%;
+}
+
+.grounded
+{
+	position: absolute;
+	bottom: 20%;
+}
+
+.background
+{
+	position: absolute;
+	bottom: 20%;
+}
+
+.sprite
+{
+	position: absolute;
+	bottom: 20%;
+}
+
+#batBullets
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+#batBullets > div
+{
+	position: relative;
+	height: 100%;
+}
+
+.bullet
+{
+	position: absolute;
+}
